@@ -1,15 +1,13 @@
 
 public abstract class Transaccion {
     private int numTransaccion;
-    private double valor;
     private String fecha;
     private String tipoTransaccion;
     private Producto producto;
     private Sucursal sucursal;
 
-    public Transaccion(int numTransaccion, double valor, String fecha, String tipoTransaccion, Producto producto, Sucursal sucursal) {
+    public Transaccion(int numTransaccion, String fecha, String tipoTransaccion, Producto producto, Sucursal sucursal) {
         this.numTransaccion = numTransaccion;
-        this.valor = valor;
         this.fecha = fecha;
         this.tipoTransaccion = tipoTransaccion;
         this.producto = producto;
@@ -33,13 +31,6 @@ public abstract class Transaccion {
         this.producto = producto;
     }
 
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
 
     public String getFecha() {
         return fecha;
@@ -71,7 +62,6 @@ public abstract class Transaccion {
     public String toString() {
         return "Transaccion{" +
                 "numTransaccion=" + numTransaccion +
-                ", valor=" + valor +
                 ", fecha=" + fecha +
                 ", tipoTransaccion='" + tipoTransaccion + '\'' +
                 '}';

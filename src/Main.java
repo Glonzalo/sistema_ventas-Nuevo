@@ -19,7 +19,7 @@ public class Main {
         Sucursal Puerto_Montt = new Sucursal(65,"Puerto Montt",50000,"Puerto Montt");
         System.out.println("La sucursal creada es "+ Puerto_Montt.toString());
         //Creacion de productos
-        Producto Dell_alienware = new Producto(454,"Dell_alienware" ,2400000, "Dell", "portable");
+        Producto Dell_alienware = new Producto(454,"Dell_alienware" ,1200, "Dell", "portable");
         sistema.contarProducto();
         Producto SSD_Kingston = new Producto(455,"SSD_Kingston", 25000, "Kingston", "almacenamiento");
         sistema.contarProducto();
@@ -38,7 +38,7 @@ public class Main {
         Cliente Carla = new Cliente("17414555-0","Carla","Carlangas","977558844","Costa Tenglo #414");
 
         //Creacion de Compra
-        Compra Notebook = new Compra(10101,24500,"23/08/2018","Compra",Carlos_HP, Dell_alienware, Puerto_Montt);
+        Compra Notebook = new Compra(10101,"23/08/2018","Compra",Carlos_HP, Dell_alienware, Puerto_Montt);
 
         System.out.println("La empresa creada es " + Pcfailtory.toString());
         System.out.println("El producto es "+Dell_alienware.toString());
