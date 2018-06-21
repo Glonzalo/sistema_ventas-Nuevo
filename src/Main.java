@@ -18,12 +18,13 @@ public class Main {
         //Creacion de Sucursal
         Sucursal Puerto_Montt = new Sucursal(65,"Puerto Montt",50000,"Puerto Montt");
         System.out.println("La sucursal creada es "+ Puerto_Montt.toString());
+
         //Creacion de productos
         Producto Dell_alienware = new Producto(454,"Dell_alienware" ,1200, "Dell", "portable");
         sistema.contarProducto();
         Producto SSD_Kingston = new Producto(455,"SSD_Kingston", 25000, "Kingston", "almacenamiento");
         sistema.contarProducto();
-        Producto Mem_RAM = new Producto(456, "Mem_RAM",20000, "Adata", "memorias volatiles");
+        Producto Mem_RAM = new Producto(456, "Mem_RAM",3500, "Adata", "memorias volatiles");
         sistema.contarProducto();
         Producto Smart_TV = new Producto(459,"Smart_TV", 250000, "LG", "Tv");
         sistema.contarProducto();
@@ -33,12 +34,17 @@ public class Main {
 
         //Creacion de Proveedor
         Proveedor Carlos_HP = new Proveedor("77412124-4","Carlos","Carlangas","977213234","Los Tenios #244","HP,DELL,IBM");
+        Proveedor Pablo_Toshiba = new Proveedor("12.424.564-7","Pablo","Fuentes","966768754","Isla Teja #243","Toshiba");
 
         //Creacion de Cliente
         Cliente Carla = new Cliente("17414555-0","Carla","Carlangas","977558844","Costa Tenglo #414");
 
         //Creacion de Compra
         Compra Notebook = new Compra(10101,"23/08/2018","Compra",Carlos_HP, Dell_alienware, Puerto_Montt);
+        System.out.println("La sucursal creada es "+ Puerto_Montt.toString());
+
+        //Creacion de Venta
+        Venta compra_ram = new Venta(10102,"24/08/2018","Venta",Carla,Mem_RAM,Puerto_Montt);
 
         System.out.println("La empresa creada es " + Pcfailtory.toString());
         System.out.println("El producto es "+Dell_alienware.toString());
@@ -46,6 +52,8 @@ public class Main {
         System.out.println("El vendedor creado es " + Gonzalo.toString());
         System.out.println("El proveedor creado es " + Carlos_HP.toString());
         System.out.println("El producto comprado es " + Notebook.toString());
+        System.out.println("La sucursal creada es "+ Puerto_Montt.toString());
+        System.out.println("La compra efectuada es "+ compra_ram.toString());
         System.out.println("La sucursal creada es "+ Puerto_Montt.toString());
 
 

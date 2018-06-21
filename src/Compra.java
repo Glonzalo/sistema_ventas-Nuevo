@@ -24,5 +24,4 @@ public class Compra extends Transaccion {
        getSucursal().setCaja(total);
        return getProducto().getValor();
     }
-
 }
