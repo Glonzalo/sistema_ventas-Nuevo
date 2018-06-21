@@ -10,6 +10,7 @@ public class Producto {
         this.marca = marca;
         this.tipo = tipo;
         this.nombre = nombre;
+
     }
 
     public int id_contProducto(){
@@ -66,7 +67,6 @@ public class Producto {
     }
 
     public void agregarProducto(){
-
     }
 
     @Override
@@ -74,6 +74,8 @@ public class Producto {
         return "Codigo producto = " + codProducto +
                 ", valor = " + valor +
                 ", marca = " + marca +
-                ", tipo = " + tipo;
+                ", tipo = " + tipo+
+                ", nombre = " + nombre;
     }
+
 }

@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
         String salida = "";
 
@@ -17,7 +16,6 @@ public class Main {
 
         //Creacion de Sucursal
         Sucursal Puerto_Montt = new Sucursal(65,"Puerto Montt",50000,"Puerto Montt");
-        System.out.println("La sucursal creada es "+ Puerto_Montt.toString());
 
         //Creacion de productos
         Producto Dell_alienware = new Producto(454,"Dell_alienware" ,1200, "Dell", "portable");
@@ -41,7 +39,6 @@ public class Main {
 
         //Creacion de Compra
         Compra Notebook = new Compra(10101,"23/08/2018","Compra",Carlos_HP, Dell_alienware, Puerto_Montt);
-        System.out.println("La sucursal creada es "+ Puerto_Montt.toString());
 
         //Creacion de Venta
         Venta compra_ram = new Venta(10102,"24/08/2018","Venta",Carla,Mem_RAM,Puerto_Montt);
@@ -52,11 +49,30 @@ public class Main {
         System.out.println("El vendedor creado es " + Gonzalo.toString());
         System.out.println("El proveedor creado es " + Carlos_HP.toString());
         System.out.println("El producto comprado es " + Notebook.toString());
-        System.out.println("La sucursal creada es "+ Puerto_Montt.toString());
         System.out.println("La compra efectuada es "+ compra_ram.toString());
-        System.out.println("La sucursal creada es "+ Puerto_Montt.toString());
-
-
-
+        System.out.println(Puerto_Montt.resumencaja());
+        System.out.println(crearProducto());
     }
+
+    public static String crearProducto(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Por favor ingrese el nomnbre del producto:");
+        String nombre = sc.next();
+        System.out.println("Muy bien el producto se llamará " + nombre);
+        System.out.println("Por favor ingrese el codigo del producto: ");
+        int cod = sc.nextInt();
+        System.out.println("Muy bien el producto tendrá el código" + cod);
+        System.out.println("Por favor ingrese el valor del producto: $");
+        int precio= sc.nextInt();
+        System.out.println("Muy bien el producto tendrá el precio" + precio);
+        System.out.println("Por favor ingrese la marca del producto: ");
+        String marca= sc.next();
+        System.out.println("Muy bien el producto será de marca" + marca);
+        System.out.println("Por favor ingrese el tipo de producto: ");
+        String tipo= sc.next();
+        System.out.println("Muy bien el producto será de tipo" + tipo);
+        Producto prod = new Producto(cod,nombre,precio, marca, tipo);
+        return prod.toString();
+    }
+
 }

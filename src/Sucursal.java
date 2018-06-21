@@ -37,7 +37,11 @@ public class Sucursal {
 
     @Override
     public String toString() {
-        return nombre +" Codigo de Sucursal = " + codSucursal + "caja: " + caja;
+        return nombre +" Codigo de Sucursal = " + codSucursal + "nombre: " + nombre;
+    }
+
+    public String resumencaja(){
+        return "El dinero en caja es el total de: " + caja;
     }
 
 }
